@@ -21,6 +21,7 @@ header {
     position: relative;
     width: 100%;
     z-index: 9;
+    /* display: none; */
 }
 .head-container {
     width: 70%;
@@ -67,7 +68,7 @@ header nav span {
 header .bars {
     display: none;
 }
-@media (max-width:768px){
+@media (max-width:992px){
     header .bars {
         display: flex;
     }
@@ -197,13 +198,12 @@ header .bars {
 /* End Header Caption */
 /* Start Services Section */
 .services {
-    width: 80%;
-    margin: auto;
+    padding: 5px;
 }
 .container {
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat( auto-fill, minmax(300px, 1fr));
+    gap: 40px;
 }
 .services .serv-container {
     text-align: center;
@@ -230,6 +230,7 @@ header .bars {
 }
 .services .serv-container p {
     color: var(--p-color);
+    text-align: start;
     line-height: 1.7;
 }
 .design {
@@ -284,8 +285,10 @@ header .bars {
     background: var(--main-color);
 }
 .portfolio .imgs {
+    padding: 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 5px;
 }
 .portfolio .imgs .box {
     position: relative;
@@ -367,11 +370,11 @@ header .bars {
     transform: translateX(-50%);
 }
 .about .info {
-    height: 500px;
+    padding: 50px 5px;
     background: url(/IMG/stats.png) no-repeat;
     background-size: cover;
     display: grid;
-    grid-template-columns: repeat( auto-fill, minmax( 250px, 1fr));
+    grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr));
     gap: 5px;
     align-content: center;
 }
@@ -393,11 +396,10 @@ header .bars {
     font-weight: 400;
 }
 .about .test-skill {
-    padding: var(--section-padding) 30px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 370px);
-    gap: 0 50px;
+    padding: var(--section-padding);
+    display: block;
     justify-content: center;
+    gap: 50px;
 }
 .about .test-skill .testimonials > h3,
 .about .test-skill .skills > h3 {
@@ -413,12 +415,23 @@ header .bars {
 .about .test-skill .testimonials .per {
     margin-top: 50px;
 }
+.about .test-skill .testimonials {
+    flex: 1;
+}
+.about .test-skill .skills {
+    flex: 1;
+}
 @media (min-width:768px) {
     .about .test-skill .testimonials .per {
         display: flex;
     }
     .about .test-skill .testimonials .per img {
         margin-right: 30px;
+    }
+}
+@media (min-width: 992px) {
+    .about .test-skill {
+        display: flex;
     }
 }
 .about .test-skill .testimonials .per img {
@@ -478,10 +491,8 @@ header .bars {
 }
 .pricing .titles-pricing {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 10px;
-    width: 80%;
-    margin: auto;
 }
 .pricing .titles-pricing .basic {
     background: #eee;
